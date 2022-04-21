@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
-
-import 'package:newsapp/core/errors/failures/failure.dart';
+import 'package:newsapp/core/errors/failures.dart';
 import 'package:newsapp/core/usecases/usecase.dart';
 import 'package:newsapp/core/usecases/usecase_params.dart';
 import 'package:newsapp/features/news/domain/entities/news.dart';
@@ -16,4 +15,3 @@ class FetchNews implements UseCase<List<News>, FetchNewsParams> {
     return repository.fetchNews(params);
   }
 }
-
