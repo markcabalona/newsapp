@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:newsapp/features/news/domain/entities/news.dart';
 
 class NewsModel extends News {
@@ -41,13 +43,11 @@ class NewsModel extends News {
       description: map['description'] ?? 'Unavailable',
       url: map['url'] ?? 'Unavailable',
       source: map['source'] ?? 'Not Specified',
-      imageUrl: map['image'] ??
-          'local storage', // TODO set to default news image path in assets
+      imageUrl: map['image'] ?? 'assets/images/news_default.jpg',
       category: map['category'] ?? 'general',
       publishedAt: map['published_at'] != null
           ? DateTime.parse(map['published_at'])
           : DateTime.now(),
     );
   }
-
 }
